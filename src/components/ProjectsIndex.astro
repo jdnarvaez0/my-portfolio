@@ -1,0 +1,33 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+import ImgPokedex from "../assets/imgpokedex.jpg";
+import ImgKentuckyPizza from "../assets/imgkentuckyPizza.jpg";
+import ImgGithubSearch from "../assets/imggithubSearch.jpg";
+---
+
+<ProjectCard
+	title="HenryPokedex-MERN"
+	image={ImgPokedex}
+	desc="Aplicación web que muestra información sobre todos los Pokémon. Tiene una interfaz de usuario que permite buscar Pokémon por nombre, tipo o generación, y también crear tus propios Pokémon."
+	url="https://pi-henry-pokedex.vercel.app/"
+	badge="New"
+	tags={["React", "Redux", "Node", "Express", "PostgreSQL"]}
+/>
+
+<ProjectCard
+	title="Kentucky Pizza"
+	image={ImgKentuckyPizza}
+	desc="Aplicación web para una pizzería. Permite a los clientes realizar pedidos y a los administradores gestionar los mismos."
+	url="https://kentucky-pizza.vercel.app/"
+	badge="New"
+	tags={["React", "Redux", "Node", "Express", "PostgreSQL"]}
+/>
+
+<ProjectCard
+	title="Github Search"
+	image={ImgGithubSearch}
+	desc="Aplicación web que permite buscar usuarios de Github y ver sus repositorios."
+	url="https://github-search-psi.vercel.app/"
+	badge="New"
+	tags={["JavaScript", "HTML", "CSS"]}
+/>
