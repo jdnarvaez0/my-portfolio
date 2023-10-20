@@ -2,6 +2,7 @@
 import ProjectCard from "./ProjectCard.astro";
 import ImgPokedex from "../assets/imgpokedex.jpg";
 import ImgKentuckyPizza from "../assets/imgkentuckyPizza.jpg";
+import ImgPortfolioVanilla from "../assets/portfolio-img.png";
 import ImgGithubSearch from "../assets/imggithubSearch.jpg";
 ---
 
@@ -21,6 +22,15 @@ import ImgGithubSearch from "../assets/imggithubSearch.jpg";
 	url="https://kentucky-pizza.vercel.app/"
 	badge="New"
 	tags={["React", "Redux", "Node", "Express", "PostgreSQL"]}
+/>
+
+<ProjectCard
+	title="My Portfolio Vanilla"
+	image={ImgPortfolioVanilla}
+	desc="Mi portfolio personal, usando HTML, CSS y JavaScript."
+	url="https://unique-nougat-30db13.netlify.app/"
+	badge="New"
+	tags={["JavaScript", "HTML", "CSS"]}
 />
 
 <ProjectCard
