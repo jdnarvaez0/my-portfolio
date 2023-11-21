@@ -17,7 +17,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-	<section class="h-[50vh] items-center pt-0 md:h-[80vh] md:pt-[4vh]">
+	<section class="mb-16 md:mb-0">
 		<div
 			class="ms:items-end flex h-auto flex-col-reverse justify-between sm:h-[calc(100vh-3rem)] sm:flex-row md:h-[calc(100vh-20rem)] md:items-center"
 		>
@@ -27,23 +27,22 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 				>
 					Hola,
 					<img
-						class="mx-3 mb-3"
+						class="mx-3 mb-3 w-6 md:w-8"
 						src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif"
 						alt="hi"
-						width="10%"
 					/>
 					 Soy
 				</h2>
 
-				<h1 class="mb-1 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
+				<h1 class="mb-1 text-2xl font-bold tracking-tight text-black dark:text-white md:text-3xl">
 					Juan David Narváez
 				</h1>
-				<h2 class="text-lg font-semibold text-gray-700 dark:text-gray-200 md:text-2xl">
+				<h2 class="text-base font-semibold text-gray-700 dark:text-gray-200 md:text-xl">
 					Full Stack Web Developer
 				</h2>
 				<SocialList />
 			</div>
-			<div class="relative mb-6 w-[130px] sm:mb-0 sm:w-[250px]">
+			<div class="relative mb-10 w-[130px] sm:mb-0 sm:w-[170px] md:mb-0">
 				<Image
 					alt="Juan Narvaez"
 					height={0}
@@ -87,7 +86,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		<ul class="space-y-4 sm:space-y-2">
 			{
 				allPostsByDate.map((p) => (
-					<li class="flex flex-col gap-x-2 text-base sm:flex-row">
+					<li class="flex flex-col gap-x-2 text-sm sm:flex-row md:text-base">
 						<PostPreview post={p} />
 					</li>
 				))

@@ -5,7 +5,7 @@ publishDate: "31 Oct 2023"
 coverImage:
   src: "./banner.png"
   alt: "polyfills img"
-  tags: ["Javascript"]
+tags: ["Javascript"]
 ---
 
 ## Introducción
