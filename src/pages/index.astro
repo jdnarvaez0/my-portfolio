@@ -6,7 +6,7 @@ import PostPreview from "@/components/blog/PostPreview";
 import SocialList from "@/components/SocialList";
 import { sortMDByDate } from "@/utils";
 import Avatar from "../assets/perfil.jpg";
-import ProjectsIndex from "@/components/ProjectsIndex";
+// import ProjectsIndex from "@/components/ProjectsIndex";
 import SkillsFront from "@/components/SkillsFront";
 import SkillsBack from "@/components/SkillsBack";
 import Tools from "@/components/Tools";
@@ -19,7 +19,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 <PageLayout meta={{ title: "Home" }}>
 	<section class="mb-16 md:mb-0">
 		<div
-			class="ms:items-end flex h-auto flex-col-reverse justify-between sm:h-[calc(100vh-3rem)] sm:flex-row md:h-[calc(100vh-20rem)] md:items-center"
+			class="ms:items-end flex h-[calc(100vh-25rem)] flex-col-reverse justify-between sm:h-[calc(100vh-30rem)] sm:flex-row md:h-[calc(100vh-25rem)] md:items-center"
 		>
 			<div class="flex flex-col">
 				<h2
@@ -37,12 +37,12 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 				<h1 class="mb-1 text-2xl font-bold tracking-tight text-black dark:text-white md:text-3xl">
 					Juan David Narváez
 				</h1>
-				<h2 class="text-base font-semibold text-gray-700 dark:text-gray-200 md:text-xl">
+				<h2 class="text-base font-medium text-gray-700 dark:text-gray-200 md:text-lg">
 					Full Stack Web Developer
 				</h2>
 				<SocialList />
 			</div>
-			<div class="relative mb-10 w-[130px] sm:mb-0 sm:w-[170px] md:mb-0">
+			<div class="relative mb-10 w-[130px] sm:mb-0 sm:w-[160px] md:mb-0">
 				<Image
 					alt="Juan Narvaez"
 					height={0}
@@ -55,12 +55,25 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</div>
 	</section>
 
-	<section>
+	<!-- <section>
 		<h2 class="title mb-4 text-xl md:text-2xl">Proyectos</h2>
 		<ProjectsIndex />
 		<p class="mt-5 text-right text-sm">
 			<a class="text-primary text-base" href="/works"> ...& mas &rarr;</a>
 		</p>
+	</section> -->
+
+	<section aria-label="Blog post list" class="mt-8">
+		<h2 class="title mb-4 text-xl md:text-2xl">Posts</h2>
+		<ul class="space-y-4 sm:space-y-2">
+			{
+				allPostsByDate.map((p) => (
+					<li class="flex flex-col gap-x-2 text-sm sm:flex-row md:text-base">
+						<PostPreview post={p} />
+					</li>
+				))
+			}
+		</ul>
 	</section>
 
 	<section class="mt-16">
@@ -79,18 +92,5 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			<h2 class="mb-4 text-center text-xl">Herramientas</h2>
 			<Tools />
 		</div>
-	</section>
-
-	<section aria-label="Blog post list" class="mt-16">
-		<h2 class="title mb-4 text-xl md:text-2xl">Posts</h2>
-		<ul class="space-y-4 sm:space-y-2">
-			{
-				allPostsByDate.map((p) => (
-					<li class="flex flex-col gap-x-2 text-sm sm:flex-row md:text-base">
-						<PostPreview post={p} />
-					</li>
-				))
-			}
-		</ul>
 	</section>
 </PageLayout>

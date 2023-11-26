@@ -6,7 +6,7 @@ export const siteConfig: SiteConfig = {
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
 	title: "Juan Narváez",
 	// Meta property used as the default description meta property
-	description: "An opinionated starter theme for Astro",
+	description: "Juan David's Portfolio",
 	// HTML lang property, found in src/layouts/Base.astro L:18
 	lang: "en-GB",
 	// Meta property, found in src/components/BaseHead.astro L:42
@@ -25,19 +25,19 @@ export const siteConfig: SiteConfig = {
 // Used to generate links in both the Header & Footer.
 export const menuLinks: Array<{ title: string; path: string }> = [
 	{
-		title: "Home",
+		title: "Inicio",
 		path: "/",
 	},
 	{
-		title: "Projects",
+		title: "Sobre mi",
+		path: "/about/",
+	},
+	{
+		title: "Proyectos",
 		path: "/works/",
 	},
 	{
 		title: "Blog",
 		path: "/posts/",
-	},
-	{
-		title: "CV",
-		path: "/cv/",
 	},
 ];
